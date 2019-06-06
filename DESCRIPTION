@@ -1,0 +1,23 @@
+Package: remss
+Title: Refining Evaluation Methodology on Stage System
+Version: 1.0.0
+Authors@R: c(person(given = "Wei",
+           family = "Xu",
+           role = c("aut"),
+           email = "Wei.Xu@uhnresearch.ca"),
+           person(given = "Susie",
+           family = "Su",
+           role = c("aut"),
+           email = "Susie.Su@uhnresearch.ca"),
+           person(given = "Yi",
+           family = "Zhu",
+           role = c("cre"),
+           email = "yizhu87@gmail.com"))
+Description: TNM stage is important in treatment decision-making and outcome predicting. The existing Oropharyngeal Cancer                (OPC) TNM stages have not made distinction of the two sub sites of HPV+ and HPV- diseases.We developed novel              criteria to assess performance of the TNM stage grouping schemes based on parametric modeling adjusting on                    important clinical factors. These criteria evaluate the TNM stage groupingscheme in five different measures:                  hazard  consistency, hazard discrimination, explained variation, likelihood difference, and balance.
+Depends: R (>= 3.5.0)
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    survival
+RoxygenNote: 6.1.1
