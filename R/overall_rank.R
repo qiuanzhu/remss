@@ -9,7 +9,7 @@
 #' @param BM  BM is the balance measurement results.
 #' @param weight weight vector of five measurements. 
 #' @return Overall score and overall ranking.
-#' @references Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biom Biostat 2 (2015): 1014.
+#' @references Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biometrics and Biostatistics 2 (2015): 1014.
 #' @import  stats
 overall_rank <- function(HCM, HDM, LDM, EVM, BM, weight) {
     

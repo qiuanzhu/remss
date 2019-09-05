@@ -9,7 +9,7 @@ hz_cons_measure(main_list, stage_list, covar_list, data)
 \arguments{
 \item{main_list}{main_list includes survival indicator variable, Duration time of survival variable and basic group variable.}
 
-\item{stage_list}{stage_list is numerical form of each scheme by using orther of stages information.}
+\item{stage_list}{stage_list is numerical form of each scheme by using other of stages information.}
 
 \item{covar_list}{Covariate variables taking into consideration.}
 
@@ -22,5 +22,5 @@ Ranking of hazard consistency measurement and  standardized score.
 \code{hz_cons_measure} returns Hazard consistency for the grouping scheme.
 }
 \references{
-Xu, W., et al. "Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer." Austin Biom Biostat 2 (2015): 1014.
+Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biometrics and Biostatistics 2 (2015): 1014.
 }

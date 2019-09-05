@@ -6,7 +6,7 @@
 #' @param ostime Duration time of survival.
 #' @param groupvar Basic group variable having the most number of stages.
 #' @param scheme Different grouping scheme, which has less stages than the basic group variable.
-#' @param order The orther of stages in each grouping, from  
+#' @param order The other of stages in each grouping, from  
 #' @param covariate Covariate variables taking into consideration. 
 #' @param weight Weight on five measurements of grouping scheme. 
 #' @param data Data set. 
@@ -140,11 +140,11 @@ rank <- function(os, ostime, groupvar, scheme, order, covariate, weight, data) {
     
     
     main_list = c(os, ostime, groupvar)
-    T1 = hz_cons_measure(main_list, new_var_list, covariate, data_red)
-    T2 = hz_dis_measure(main_list, scheme, new_var_list, covariate, data_red)
-    T3 = lik_diff_measure(main_list, scheme, covariate, data_red)
-    T4 = explain_var_measure(main_list[1:2], scheme, new_var_list, new_var_list2, data_red)
-    T5 = balance_measure(main_list[1], scheme, data_red)
+    T1 = hz_cons_measure(main_list, new_var_list, covariate, data_red)  ## good with negative value 
+    T2 = hz_dis_measure(main_list, scheme, new_var_list, covariate, data_red)   ## good with negative value 
+    T3 = lik_diff_measure(main_list, scheme, covariate, data_red)   ## good 
+    T4 =  explain_var_measure(main_list[1:2], scheme, new_var_list, new_var_list2, data_red)
+    T5 = balance_measure(main_list[1], scheme, data_red)   ## good
     T6 = overall_rank(T1, T2, T3, T4, T5, weight)
     
     mylist <- c(T0, T1, T2, T3, T4, T5, T6)

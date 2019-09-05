@@ -11,7 +11,7 @@ hz_dis_measure(main_list, stage_list, stage_list2, covar_list, data)
 
 \item{stage_list}{stage_list original of each scheme.}
 
-\item{stage_list2}{stage_list2 is numerical form of each scheme by using orther of stages information.}
+\item{stage_list2}{stage_list2 is numerical form of each scheme by using other of stages information.}
 
 \item{covar_list}{Covariate variables taking into consideration.}
 
@@ -24,5 +24,5 @@ Ranking of hazard discrimination measurement and its standardized score.
 \code{hz_dis_measure} returns hazard discrimination for the grouping scheme.
 }
 \references{
-Xu, W., et al. "Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer." Austin Biom Biostat 2 (2015): 1014.
+Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biometrics and Biostatistics 2 (2015): 1014.
 }

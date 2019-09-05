@@ -26,5 +26,5 @@ Overall score and overall ranking.
 \code{overall_rank} returns overall ranking for the grouping scheme.
 }
 \references{
-Xu, W., et al. "Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer." Austin Biom Biostat 2 (2015): 1014.
+Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biometrics and Biostatistics 2 (2015): 1014.
 }

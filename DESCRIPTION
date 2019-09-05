@@ -13,7 +13,7 @@ Authors@R: c(person(given = "Wei",
            family = "Zhu",
            role = c("cre"),
            email = "yizhu87@gmail.com"))
-Description: TNM stage is important in treatment decision-making and outcome predicting. The existing Oropharyngeal Cancer                (OPC) TNM stages have not made distinction of the two sub sites of HPV+ and HPV- diseases.We developed novel              criteria to assess performance of the TNM stage grouping schemes based on parametric modeling adjusting on                    important clinical factors. These criteria evaluate the TNM stage groupingscheme in five different measures:                  hazard  consistency, hazard discrimination, explained variation, likelihood difference, and balance.
+Description: TNM stage is important in treatment decision-making and outcome predicting. The existing oropharyngeal Cancer                (OPC) TNM stages have not made distinction of the two sub sites of HPV+ and HPV- diseases.We developed novel              criteria to assess performance of the TNM stage grouping schemes based on parametric modeling adjusting on                    important clinical factors. These criteria evaluate the TNM stage grouping scheme in five different measures:                  hazard  consistency, hazard discrimination, explained variation, likelihood difference, and balance. The                    methods are described in Xu, W., et al. "Refining evaluation methodology on TNM stage system: assessment on             HPV-related oropharyngeal cancer." Austin Biom Biostat 2 (2015): 1014.
 Depends: R (>= 3.5.0)
 License: GPL-2
 Encoding: UTF-8
@@ -21,3 +21,8 @@ LazyData: true
 Imports: 
     survival
 RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr

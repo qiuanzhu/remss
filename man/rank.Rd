@@ -15,7 +15,7 @@ rank(os, ostime, groupvar, scheme, order, covariate, weight, data)
 
 \item{scheme}{Different grouping scheme, which has less stages than the basic group variable.}
 
-\item{order}{The orther of stages in each grouping, from}
+\item{order}{The other of stages in each grouping, from}
 
 \item{covariate}{Covariate variables taking into consideration.}
 
@@ -32,13 +32,13 @@ Ranking of five measurements, which are Hazard consistency, Hazard discriminatio
 \examples{
  
 data(Rdata)
-Scheme=c("Scheme.1","Scheme.2","Scheme.3")
-Covar=c("Age","Treatment")
+Scheme=c('Scheme.1','Scheme.2','Scheme.3')
+Covar=c('Age','Treatment')
 weight=c(1,1,0.5,0.5,1)
-Order=list(c("I","II","III"),c("I","II","III","IV"),c("I","II","III","IV"))
-rank(os="OS",ostime="survmonth",groupvar="Basic_group", scheme=Scheme, order=Order,
+Order=list(c('I','II','III'),c('I','II','III','IV'),c('I','II','III','IV'))
+rank(os='OS',ostime='survmonth',groupvar='Basic_group', scheme=Scheme, order=Order,
      covariate=Covar,weight=weight,data=Rdata)
 }
 \references{
-Xu, W., et al. "Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer." Austin Biom Biostat 2 (2015): 1014.
+Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biom Biostat 2 (2015): 1014.
 }

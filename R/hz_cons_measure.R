@@ -3,14 +3,13 @@
 #' \code{hz_cons_measure} returns Hazard consistency for the grouping scheme.  
 #' 
 #' @param main_list main_list includes survival indicator variable, Duration time of survival variable and basic group variable.
-#' @param stage_list stage_list is numerical form of each scheme by using orther of stages information.
+#' @param stage_list stage_list is numerical form of each scheme by using other of stages information.
 #' @param covar_list Covariate variables taking into consideration.
 #' @param data Data set. 
 #' @return Ranking of hazard consistency measurement and  standardized score.
-#' @references Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biom Biostat 2 (2015): 1014.
+#' @references Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biometrics and Biostatistics 2 (2015): 1014.
 #' @import  survival
 #' @import  stats
-#' @export
 hz_cons_measure <- function(main_list, stage_list, covar_list, data) {
     
     n <- length(stage_list)

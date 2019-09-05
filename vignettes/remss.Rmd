@@ -1,0 +1,83 @@
+---
+title: "remss"
+author: "Wei Xu, Susie Su, Yi Zhu"
+date: "`r Sys.Date()`"
+show_toc: true
+slug: xlink
+githubEditURL: https://github.com/qiuanzhu/xlink/blob/master/vignettes/remss.Rmd
+output: 
+     rmarkdown::html_vignette:
+     toc: yes
+vignette: >
+  %\VignetteIndexEntry{An Introduction to xlink}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# 1. Introduction
+**remss** from [github](https://github.com/qiuanzhu/remss) is a package for TNM stage is important in treatment decision-making and outcome predicting. The existing oropharyngeal Cancer (OPC) TNM stages have not made distinction of the two sub sites of HPV+ and HPV- diseases.We developed novel criteria to assess performance of the TNM stage grouping schemes based on parametric modeling adjusting on important clinical factors. These criteria evaluate the TNM stage grouping scheme in five different measures: hazard  consistency, hazard discrimination, explained variation, likelihood difference, and balance. 
+
+## Reference:
+> "Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.'Austin Biometrics and Biostatistics 2 (2015): 1014." ([via](https://www.austinpublishinggroup.com/biometrics/fulltext/biometrics-v2-id1014.php))
+
+
+# 2. Installation
+You can install **remss** from [github]((https://github.com/qiuanzhu/remss):
+
+```{r eval=FALSE}
+library("devtools")
+install_github("qiuanzhu/remss")
+
+```
+
+
+#3. Examples
+
+In the following examples, 
+
+
+## 3.1 Select significant SNPs from XCI or XCI-E model type:
+In the sample data with 10 SNPs and 4 clinic covariates, 
+```{r eval=FALSE}
+library("remss")
+head(Rdata)
+
+```
+
+
+```{r, echo=FALSE, results='asis'}
+library(xlink)
+knitr::kable(head(Rdata))
+```
+
+If the Model type is chosen to be **XCI** and threshold for **MAF_v** is set to be 0.05, the output for snp_1 with coefficient, P value and loglikelihood information
+
+```{r eval=FALSE}
+Covars<-c("Age","Smoking","Treatment")
+SNPs<-c("snp_1","snp_2")
+output<-xlink_fit(os="OS",ostime="OS_time",snps=SNPs,gender="gender",covars=Covars, option =list(type="XCI",MAF_v=0.05),model="survival",data = Rdata)
+
+```
+
+```{r echo=FALSE, results='asis'}
+Covars<-c("Age","Smoking","Treatment")
+SNPs<-c("snp_1","snp_2")
+output<-xlink_fit(os="OS",ostime="OS_time",snps=SNPs,gender="gender",covars=Covars, option =list(type="XCI",MAF_v=0.05),model="survival",data = Rdata)
+
+```
+
+```{r echo=FALSE, results='asis'}
+knitr::kable(output[1]$snp_1$coefficients)
+
+
+knitr::kable(output[1]$snp_1$loglik)
+
+```
+

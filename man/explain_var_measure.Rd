@@ -11,7 +11,7 @@ explain_var_measure(main_list, stage_list, stage_list_2, covar_list, data)
 
 \item{stage_list}{stage_list original of each scheme.}
 
-\item{stage_list_2}{stage_list_2 is numerical form of each scheme by using orther of stages information.}
+\item{stage_list_2}{stage_list_2 is numerical form of each scheme by using other of stages information.}
 
 \item{covar_list}{Covariate variables taking into consideration.}
 
@@ -24,5 +24,5 @@ Ranking of explained variation measurement and its standardized score.
 \code{explain_var_measure} returns explained variation measurement for the grouping scheme.
 }
 \references{
-Xu, W., et al. "Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer." Austin Biom Biostat 2 (2015): 1014.
+Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biometrics and Biostatistics 2 (2015): 1014.
 }

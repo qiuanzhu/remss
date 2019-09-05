@@ -6,10 +6,9 @@
 #' @param stage_list stage_list original of each scheme.
 #' @param data Data set. 
 #' @return Ranking of balance measurement and its standardized score.
-#' @references Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biom Biostat 2 (2015): 1014.
+#' @references Xu, W., et al. 'Refining evaluation methodology on TNM stage system: assessment on HPV-related oropharyngeal cancer.' Austin Biometrics and Biostatistics 2 (2015): 1014.
 #' @import  survival
 #' @import  stats
-#' @export
 balance_measure <- function(OS_ind, stage_list, data) {
     
     n <- length(stage_list)
@@ -18,7 +17,6 @@ balance_measure <- function(OS_ind, stage_list, data) {
     Std_Score <- rep(0, n)
     Rank <- c(1:1:n)
     col_OS <- which(colnames(data) == OS_ind)
-    # total_case <- sum(data[, col_OS])
     total_case <- length(data[, col_OS])
     
     for (i in 1:n) {
@@ -27,7 +25,6 @@ balance_measure <- function(OS_ind, stage_list, data) {
         num_case <- rep(0, p)
         expect_n <- total_case/p
         for (j in 1:p) {
-            # num_case[j] = sum(data[which(data[, col_num] == levels(data[, col_num])[j]), col_OS])
             num_case[j] = length(data[which(data[, col_num] == levels(data[, col_num])[j]), col_OS])
         }
         Score[i] <- mean(abs(num_case - expect_n)/expect_n)
