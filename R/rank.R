@@ -62,8 +62,8 @@ rank <- function(os, ostime, groupvar, scheme, order, covariate, weight, data) {
     
     for (i in 1:total_n) {
         if (Num_ind[i] == 1) {
-            Mean[i] <- mean(data_red[, var_col[i]])
-            Sd[i] <- sd(data_red[, var_col[i]])
+            Mean[i] <- round( mean(data_red[, var_col[i]]),4)
+            Sd[i] <-  round( sd(data_red[, var_col[i]]),4)
             Level[[length(Level) + 1]] <- "Null"
         } else {
             Mean[i] <- NA
